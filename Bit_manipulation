@@ -1,0 +1,8 @@
+1. Check K-th Bit
+
+class Solution:
+    def checkKthBit(self, n, k):
+        for i in range(k):
+            n = n // 2
+
+        return n % 2 == 1
