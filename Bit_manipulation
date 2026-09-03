@@ -6,3 +6,22 @@ class Solution:
             n = n // 2
 
         return n % 2 == 1
+
+2. Number of Even and Odd Bits
+
+class Solution:
+    def evenOddBit(self, n: int) -> List[int]:
+        ind = 0
+        even = 0
+        odd = 0
+        while n:
+            currentBit = n % 2
+            n = n // 2
+
+            if ind % 2 == 0:
+                even = even+currentBit
+            else:
+                odd = odd+currentBit
+            
+            ind = ind + 1
+        return [even, odd]
